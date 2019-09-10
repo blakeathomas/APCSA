@@ -14,7 +14,8 @@ class Lesson_9_Activity_One{
      public static void main (String str[]) throws IOException {
 
             double x = Math.random();
-            System.out.println((int)(x * 10));
+            x = ((x * 10) + 1);
+            System.out.println((int)(x));
 
 
 
