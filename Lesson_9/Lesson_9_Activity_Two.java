@@ -12,10 +12,10 @@ import java.lang.Math;
 public class Lesson_9_Activity_Two{
 
      public static void main (String [] args) throws IOException {
-			int max = 41;
+			int max = 20;
 			int min = -20;
 			int range = max - min + 1;
-       for (int i = 0; i < 10; i++) {
+       for (int i = 0; i < 100; i++) {
             int rand = (int)(Math.random() * range) + min;
             System.out.println(rand);
        }
