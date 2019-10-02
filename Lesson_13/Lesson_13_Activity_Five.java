@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import java.lang.Math;
 
-public class Lesson_9_Activity_Two{
+public class Lesson_13_Activity_Five{
 
         public static void main (String str[]) throws IOException {
      	Scanner scan = new Scanner (System.in);
