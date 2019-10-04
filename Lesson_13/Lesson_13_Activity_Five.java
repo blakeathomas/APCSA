@@ -12,17 +12,14 @@ public class Lesson_13_Activity_Five{
 
         public static void main (String str[]) throws IOException {
      	Scanner scan = new Scanner (System.in);
-     	double result;
-			int y = (int) ((Math.random() *12) +1 );
-            int x = (int) ((Math.random() *12) +1 );
-            System.out.println (x + " * " + y + " = ?");
-			result = scan.nextInt();
-			if (result == (x*y)){
-				System.out.println("Correct!");
-			} else {
-				System.out.println("Wrong");
-			}
-
+		int x = 0;
+		int y = 0;
+     	while (x > -1){
+     	x = x + scan.nextInt();
+     	y++;
+     	}
+		int average = (x/y);
+		System.out.println(average);
 
 
      }
