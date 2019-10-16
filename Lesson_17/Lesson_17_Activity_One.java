@@ -12,16 +12,20 @@ public class Lesson_17_Activity_One{
 
         public static void main (String str[]) throws IOException {
      	Scanner scan = new Scanner (System.in);
-		double x = 0;
+		int x = 0;
 		int y = 0;
 		double z = 0;
-     	while (x > -1){
+     	while (x != -1){
      	System.out.print("Please enter a grade: ");
-     	x = scan.nextDouble();
+     	x = scan.nextInt();
      	z += x;
-     	y++;
+     	y ++;
      	}
+<<<<<<< HEAD
 		double average = (double)((z+1)/(y-1));
+=======
+		double average = ((z+1)/(y-1));
+>>>>>>> 1d4fc60ac41fd003849aa2adbe86336171c877a6
 		System.out.println("The average is: " + average);
 
      }
