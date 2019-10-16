@@ -76,41 +76,71 @@ import java.lang.Math;
 
 class Lesson_20_Activity {
     public static void main(String[] args) {
-       int x = 1;
 
+       int x = 1;
        double lon = 0;
        double lat = 0;
-       double finalLong = 0;
-       double finalLat = 0;
        double north = 0, south = 0, east = 0, west = 0;
        Scanner scan = new Scanner (System.in);
 
-       while (x == 1){
-       	System.out.println("Please enter the latitude:");
-       	lon = scan.nextDouble();
-       	System.out.println("Please enter the latitude:");
+		//initial values
+		System.out.println("Please enter the latitude:");
        	lat = scan.nextDouble();
+       	System.out.println("Please enter the longitude:");
+       	lon = scan.nextDouble();
 
-       	if ((lon >= -90 && lon <= 90) && (lon >= -180 && lon <= 180)){
-	       	if (lon > north){
-	       		north = lon;
-	       	} if (lon < south){
-	       		south = lon;
-	       	}else
+       	//checking that init values are valid
+       	if ((lat >= -90 && lat <= 90) && (lon >= -180 && lon <= 180)){
 
-	       	if (lat > west){
-	       		north = lat;
-	       	} if (lat < east){
-	       		south = lat;
-	       	}
-
-	       	System.out.println("Would you like to enter a new location?");
+			//if true then assigns init values
+       		west = lon;
+       		east = lon;
+       		north = lat;
+       		south = lat;
+			System.out.println("Would you like to enter a new location?");
 	       	x = scan.nextInt();
-       	} else System.out.println("Incorrect Latitude or Longitude");
-       }
-       	System.out.println("Farthest North:" + north);
-       	System.out.println("Farthest South:" + south);
-       	System.out.println("Farthest East:" + east);
-       	System.out.println("Farthest West:" + west);
+
+       	} else {
+       		System.out.println("Incorrect Latitude or Longitude");
+       	}
+
+
+        while (x == 1){
+	       	System.out.println("Please enter the latitude:");
+	       	lat = scan.nextDouble();
+	       	System.out.println("Please enter the longitude:");
+	       	lon = scan.nextDouble();
+
+	       	if ((lat >= -90 && lat <= 90) && (lon >= -180 && lon <= 180)){
+
+		       	if (lat > north){
+		       		north = lat;
+		       	} else if (lat < south){
+		       		south = lat;
+		       	} else {
+		       		north = north;
+		       		south = south;
+		       	}
+
+		       	if (lon > east){
+		       		east = lon;
+		       	} else if (lon < west){
+		       		west = lon;
+		       	}
+
+		       	System.out.println("Would you like to enter a new location?");
+		       	x = scan.nextInt();
+
+	       	} else {
+	       		System.out.println("Incorrect Latitude or Longitude");
+	       }
+    	}
+
+    	System.out.println("Farthest North: " + north);
+       	System.out.println("Farthest South: " + south);
+       	System.out.println("Farthest East: " + east);
+       	System.out.println("Farthest West: " + west);
+
+
     }
-}
+    }
