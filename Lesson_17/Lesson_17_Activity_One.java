@@ -21,9 +21,8 @@ public class Lesson_17_Activity_One{
      	z += x;
      	y++;
      	}
-		double average = (double)((z-1)/(y));
+		double average = (double)((z+1)/(y-1));
 		System.out.println("The average is: " + average);
-
 
      }
 
