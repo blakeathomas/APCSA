@@ -79,61 +79,40 @@ import java.lang.Math;
 class Lesson_20_Activity {
     public static void main(String[] args) {
        int x = 1;
+
        double lon = 0;
        double lat = 0;
+       double finalLong = 0;
+       double finalLat = 0;
        double north = 0, south = 0, east = 0, west = 0;
        Scanner scan = new Scanner (System.in);
 
-		//initial values
-		System.out.println("Please enter the latitude:");
-       	lat = scan.nextDouble();
-       	System.out.println("Please enter the longitude:");
-       	lon = scan.nextDouble();
-       	//checking that they're valid
-       	if ((lon >= -90 && lon <= 90) && (lat >= -180 && lat <= 180)){
-			//assigning values
-	       		north = lon;
-	       		south = lon;
-	       		east = lat;
-	       		west = lat;
-
-	       	System.out.println("Would you like to enter a new location?");
-	       	x = scan.nextInt();
-
-       	} else System.out.println("Incorrect Latitude or Longitude");
-
        while (x == 1){
        	System.out.println("Please enter the latitude:");
-       	lat = scan.nextDouble();
-       	System.out.println("Please enter the longitude:");
        	lon = scan.nextDouble();
+       	System.out.println("Please enter the latitude:");
+       	lat = scan.nextDouble();
 
-       	if ((lon >= -90 && lon <= 90) && (lat >= -180 && lat <= 180)){
+       	if ((lon >= -90 && lon <= 90) && (lon >= -180 && lon <= 180)){
 	       	if (lon > north){
 	       		north = lon;
-	       	} else if (lon < south){
+	       	} if (lon < south){
 	       		south = lon;
-	       	}
+	       	}else
 
 	       	if (lat > west){
-	       		west = lat;
-	       	} else if (lat < east){
-	       		east = lat;
+	       		north = lat;
+	       	} if (lat < east){
+	       		south = lat;
 	       	}
 
 	       	System.out.println("Would you like to enter a new location?");
 	       	x = scan.nextInt();
-
-       	} else {
-       		System.out.println("Incorrect Latitude or Longitude");
+       	} else System.out.println("Incorrect Latitude or Longitude");
        }
-    }
-
-    System.out.println("Farthest North:" + north);
+       	System.out.println("Farthest North:" + north);
        	System.out.println("Farthest South:" + south);
        	System.out.println("Farthest East:" + east);
        	System.out.println("Farthest West:" + west);
-       	System.out.println(x);
-
     }
-    }
+}
