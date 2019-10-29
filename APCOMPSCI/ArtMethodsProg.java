@@ -77,7 +77,7 @@ public class ArtMethodsProg
 	{
 		drawTopFloor();
 		drawMiddleFloor(5);
-		drawBottomFloor();
+		drawGroundFloor();
 		drawPeople(5);
 
 
@@ -99,7 +99,7 @@ public class ArtMethodsProg
 	////////////////////////////////////////////////
 
 
-	public static void drawGroundFloor(int x)
+	public static void drawGroundFloor()
 	{
 		System.out.println("*          *");
 		System.out.println("*   ****   *");
@@ -114,12 +114,12 @@ public class ArtMethodsProg
 
 	public static void drawTopFloor()
 	{
-		System.out.println("    **     ");
-		System.out.println("   *  *    ");
-		System.out.println("  *     *  ");
-		System.out.println(" *       * ");
-		System.out.println("*         *");
-		System.out.println("***********");
+		System.out.println("     **     ");
+		System.out.println("   *    *   ");
+		System.out.println("  *      *  ");
+		System.out.println(" *        * ");
+		System.out.println("*          *");
+		System.out.println("************");
 
 	} // end of drawTopFloor
 
@@ -127,14 +127,17 @@ public class ArtMethodsProg
 	////////////////////////////////////////////////
 
 
-	public static void drawMiddleFloor()
+	public static void drawMiddleFloor(int num)
 	{
-		System.out.println("*         *");
-		System.out.println("*         *");
-		System.out.println("*         *");
-		System.out.println("*         *");
-		System.out.println("***********");
-
+		int y = 1;
+		while (y <= num){
+		System.out.println("*          *");
+		System.out.println("*          *");
+		System.out.println("*          *");
+		System.out.println("*          *");
+		System.out.println("************");
+		y++;
+		}
 	} // end of drawMiddleFloor
 
 
@@ -143,12 +146,14 @@ public class ArtMethodsProg
 
 	public static void drawPeople(int num)
 	{
+		int x = 1;
+		while (x <= num){
 		System.out.println(" o ");
 		System.out.println("---");
 		System.out.println(" | ");
-
-
-
+		System.out.println("/ \\\n");
+		x++;
+		}
 	} // end of drawPeople
 
 }
