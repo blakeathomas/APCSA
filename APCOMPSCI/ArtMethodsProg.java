@@ -1,4 +1,4 @@
-/** ArtMethodsProg.java
+    /** ArtMethodsProg.java
 
 You will create a program that will draw a tower with 6 floors, and then 5 stick figure people.
 
