@@ -26,18 +26,24 @@ public class Square {
     }
 
     public double area(){
-    	return side * 2;
+    	return side * side;
+    }
+    public double side(){
+    	return side;
     }
 
-    public int getCount(){
+    public static int getCount(){
     	return count;
     }
 
-    public void resetCount(){
+    public static void resetCount(){
     	count = 0;
     }
+    public void setSide(double x){
+    	side = x;
+    }
 	public String toString(){
-	    return "Square = " + side +", Area = " + area() + ", Perimeter = " + perimeter();
+	    return "Square: Side = " + side +", Area = " + area() + ", Perimeter = " + perimeter();
 	}
 
 }
