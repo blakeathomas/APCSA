@@ -1,9 +1,9 @@
-import java.util.readerner;
+import java.util.Scanner;
 
 public class mini_String_Problems {
 	public static void main (String [] args){
 		Scanner reader = new Scanner (System.in);
-	/*	//Excersise One
+		//Excersise One
 		System.out.print("Type your name: ");
 		String nameLen = reader.nextLine();
 		System.out.print("Number of characters: " + nameLen.length());
@@ -74,12 +74,11 @@ public class mini_String_Problems {
 		} else {
 			System.out.print("\nThe word '" + wordTwo + "' is found in the word '" + wordOne + "'.");
 		}
-	*/
-		//Excersise Nine
 
-
-	System.out.print("Type in your text: ");
-	String text = reader.nextLine();
-	System.out.println("In reverse order: " + reverse(text));
+		//Excersise Ten
+		reverse r1 = new reverse();
+		System.out.print("Type in your text: ");
+		String text = reader.nextLine();
+		System.out.println("In reverse order: " + r1.reverse(text));
 	}
 }

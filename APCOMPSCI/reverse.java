@@ -1,10 +1,16 @@
-public static String reverse (String text){
+public class reverse{
+
+		private String reversed = "";
+		private String text;
+		private int x = 0;
+
+		public String reverse (String text){
 		x = (text.length() - 1);
-		String reversed = text;
 		while (x >= 0){
-			reversed = reversed + text.charAt(x));
+			reversed = reversed + text.charAt(x);
 			x--;
 		}
 		text = reversed;
-		return text;
+		return reversed;
 	}
+}
