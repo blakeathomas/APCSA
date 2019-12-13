@@ -50,8 +50,31 @@ public class arrayStats {
 					count++;
 				}
 			System.out.println("The range is " + (rangeMax-rangeMin));
-		}
+
+			//Increasing/Decreasing
+			boolean increasing = true;
+			int inc = 1;
+			boolean decreasing = true;
+			int dec = 1;
+			while (inc <= array.length && increasing){
+				if (!(array[inc] >= array[inc-1]))
+					increasing = false;
+					inc++;
+			}
+
+			while (dec <= array.length && decreasing){
+				if (!(array[dec] <= array[dec-1]))
+					decreasing = false;
+					dec++;
+			}
+
+			if (increasing)
+				System.out.println("The array is sorted in increasing order");
+				else if (decreasing)
+					System.out.println("The array is sorted in decreasing order");
+						else System.out.println("The array is unsorted");
+			}
+
 		else System.out.println("Not a valid length");
 	}
-
 }
