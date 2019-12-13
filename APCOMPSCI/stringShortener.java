@@ -10,15 +10,16 @@ public class stringShortener {
 		System.out.println("Type the message to be shortened: ");
 		String message = scan.nextLine();
 
-		if ((message.length() < 10)){
+	//System.out.println(message.length());
+		if ((message.length() < 0)){
 			System.out.println("This doesn't need shortening!");
 		} else {
-				while(x < message.length()){
+				while(x < (message.length()-1)){
 					if	(((message.substring(x,x+1).equals("a"))) ||
 						((message.substring(x,x+1).equals("e"))) ||
 						((message.substring(x,x+1).equals("i"))) ||
 						((message.substring(x,x+1).equals("o"))) ||
-						((message.substring(x,x+1).equals("u")))){
+						((message.substring(x,x+1).equals("u ")))){
 						vowelCount ++;
 						System.out.print(message.charAt(x) + "  " + x);
 						x++;
