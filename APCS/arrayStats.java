@@ -53,17 +53,18 @@ public class arrayStats {
 
 			//Increasing/Decreasing
 			boolean increasing = true;
-			int inc = 1;
+			int inc = 0;
 			boolean decreasing = true;
-			int dec = 1;
-			while (inc <= array.length && increasing){
-				if (!(array[inc] >= array[inc-1]))
+			int dec = 0;
+
+			while (inc < array.length-1 && increasing){
+				if (!(array[inc] < array[inc+1]))
 					increasing = false;
 					inc++;
 			}
 
-			while (dec <= array.length && decreasing){
-				if (!(array[dec] <= array[dec-1]))
+			while (dec < array.length-1 && decreasing){
+				if (!(array[dec] > array[dec+1]))
 					decreasing = false;
 					dec++;
 			}
