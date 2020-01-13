@@ -1,14 +1,12 @@
 import java.util.*;
 public class arrayVSArrayList{
-/*//9
+//9
  name[3] = "Rattata";
+
 //10
 nameList.set(3, "Rattata");
+
 //11
-
-
-
-
 public static int searchArray (String [] arr, String search) {
 	for (int i=0; i < arr.length; i++) {
 		if (arr[i].compareTo(search) == 0)
@@ -27,9 +25,13 @@ public static int searchArray (String [] arr, String search) {
 
 }
 }
-*/
 
-ArrayList <String> arrayList = new ArrayList <String>();
-arrayList.set
+//12
 
+public int searchArrayList(ArrayList<String> str , String search) {
+	for (int i=0; i< str.size(); i++){
+		if (str.get(i).compareTo(search) == 0)
+			return i;
+	}
+	return -1;
 }
