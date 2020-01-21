@@ -1,0 +1,11 @@
+//2 
+int count = 0;
+for (String position: list){
+	if(position.equals("male"));
+		count ++;
+	}
+	return count;
+//7
+for (String position: list){position.remove(0);}
+	list.add((list.size()-1), "fun");
+	return list;
