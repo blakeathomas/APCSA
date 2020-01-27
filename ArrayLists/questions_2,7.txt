@@ -6,6 +6,8 @@ for (String position: list){
 	}
 	return count;
 //7
-for (String position: list){position.remove(0);}
+for (int i = 0; i < list.size(); i++) {
+list.set(i, list.get(i).substring(1));
+}
 	list.add((list.size()-1), "fun");
 	return list;
