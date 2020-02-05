@@ -10,21 +10,24 @@ import java.util.*;
 public class twoDeepArrays {
 
     public static void main(String[] args) {
-    	final int NUM_ROWS =3;
-	final int NUM_COLS =2;
-	int [][] scores = {{100, 200}, {200,300}, {100,100}};
-	int colSum =0;
-	double numj = 0.0;
-	double [] colAverages = new double  [2];
+		int [][] numbers = {{8, 3, 7}, {6, 7, 6}, {0, 0, 1}};
+	    final int NUM_ROWS = numbers.length;
+		final int NUM_COLS =numbers[0].length;
+		int sum = 0;
+		int colSum = 0;
+		int row = 0;
+		for (int i = 0; i< NUM_COLS; i++){
+			for (int j = 0; j< NUM_ROWS; j++){
+				colSum += numbers[j][i];
+				if (colSum > sum){
 
-	for (int i = 0; i< NUM_COLS; i++){
-		for (int j = 0; j< NUM_ROWS; j++){
-			colSum += scores[j][i];
-		numj = j *1.0;
+					row = i;
+					sum = colSum;
+				}
+			}
+			colSum = 0;
 		}
-		colAverages[i] = colSum / (numj);
-		}
-		System.out.println(Arrays.toString(colAverages));
+		System.out.println(row);
     }
 
 }
