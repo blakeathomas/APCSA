@@ -12,12 +12,17 @@ public class Board {
 	private char [][] squares;
 
     public Board(){
-    	char squares = new char [10][10];
+    	squares = new char [10][10];
 		   for (int i = 0; i<10; i++){
 		   		for (int j = 0; j<10; j++){
 		   			squares[i][j] = '-';
 		   		}
 		   }
+	}
+	public boolean addShip(int row, int col, int len, boolean horizontal) {
+		if (horizontal){
+
+		}
 	}
 
 	public String toString(){
