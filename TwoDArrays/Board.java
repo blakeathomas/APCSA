@@ -21,7 +21,19 @@ public class Board {
 	}
 	public boolean addShip(int row, int col, int len, boolean horizontal) {
 		if (horizontal){
+			if((col + len) <= 10){
+				for (int i=0; i < len; i++){
+					squares[col][i] = 'b';
+				} return true;
+			} else return false;
+		}
+		else{
 
+			if((col + len) <= 10){
+				for (int i=0; i < len; i++){
+					squares[col][i] = 'b';
+				} return true;
+			} else return false;
 		}
 	}
 
