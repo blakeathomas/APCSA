@@ -29,6 +29,7 @@ public class Board {
 		}
 		else{
 
+
 			if((col + len) <= 10){
 				for (int i=0; i < len; i++){
 					squares[col][i] = 'b';
