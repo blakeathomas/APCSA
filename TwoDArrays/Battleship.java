@@ -1,11 +1,11 @@
-/* Battleship */
+/* Battleship
 
 /* Main Battleship class -
  * requires Board class to be written
- */
 
- /* DO NOT MAKE ANY CHANGES TO THIS FILE
-  */
+
+ /* DO NOT MAKE ANY CHANGES TO THIS FILE*/
+
 
 import java.util.Scanner;
 
@@ -76,6 +76,7 @@ public class Battleship
       else
         System.out.println("\nInvalid coordinates\n");
     }
-    System.out.println("Game over!");*/
+    System.out.println("Game over!");
+
   }
 }
