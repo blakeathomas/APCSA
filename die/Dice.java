@@ -3,8 +3,8 @@ public class Dice {
 	private Die dieTwo;
 
 	public Dice(){
-		Die dieOne = new Die();
-		Die diewTwo = new Die();
+		dieOne = new Die();
+		dieTwo = new Die();
 	}
 
 	public void rollDice(){
@@ -13,10 +13,10 @@ public class Dice {
 	}
 
 	public int getValue(){
-		return dieOne.getValue()+dieTwo.getValue;
+		return dieOne.getValue()+ dieTwo.getValue();
 	}
 
 	public String toString(){
-	return " ";
+	return "First Die's Value = " + dieOne.getValue() + " and the second Die's value = " + dieTwo.getValue();
 	}
 }

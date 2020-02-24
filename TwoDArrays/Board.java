@@ -14,7 +14,7 @@ public class Board {
     public Board(){
     	squares = new char [10][10];
 		   for (int i = 0; i<10; i++){
-		   		for (int j = 0; j<10; j++){
+		   		for (int j = 0; j<9; j++){
 		   			squares[i][j] = '-';
 		   		}
 		   }
@@ -22,22 +22,25 @@ public class Board {
 	public boolean addShip(int row, int col, int len, boolean horizontal) {
 		if (horizontal){
 			if((col + len) <= 10){
-				for (int i=0; i < len; i++){
-					squares[col][i] = 'b';
+				for (int i=1; i < len+1; i++){
+					squares[col-1][i] = 'b';
 				} return true;
 			} else return false;
-		}
-		else{
+		}	else{
 
 
 			if((col + len) <= 10){
-				for (int i=0; i < len; i++){
-					squares[col][i] = 'b';
+				for (int i=1; i < len+1; i++){
+					squares[i][row-1] = 'b';
 				} return true;
 			} else return false;
 		}
 	}
 
+/*	public int shoot(int row, int col) {
+		if (squares[row][col])
+	}
+*/
 	public String toString(){
 		String conversion  = "";
 		for (int i = 0; i<10; i++){

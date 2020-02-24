@@ -20,7 +20,7 @@ public class Battleship
     System.out.println(b + "\n");
     boolean addNew = true;
 
- /*   while(addNew)
+    while(addNew)
     {
       // Ask for new ship
       System.out.println("Add a new ship? (y/n)");
@@ -53,7 +53,7 @@ public class Battleship
         System.out.println("\nOk, let's play!\n");
       }
     }
-
+/*
     // As long as ships remain, play game
     while(!b.gameOver())
     {

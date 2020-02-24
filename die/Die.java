@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Die{
 	private int value;
+
 	public Die(){
 		value = 1;
 	}
